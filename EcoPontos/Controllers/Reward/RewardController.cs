@@ -4,9 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EcoPontos.Controllers.Reward;
 
-/// <summary>
-/// Controller para gerenciar operações CRUD de Reward.
-/// </summary>
 [Route("api/[controller]")]
 [ApiController]
 public class RewardController : ControllerBase
@@ -23,7 +20,7 @@ public class RewardController : ControllerBase
     /// </summary>
     /// <param name="dto">Dados da recompensa a serem criados.</param>
     /// <returns>Dados da recompensa criada.</returns>
-    [HttpPost]
+    [HttpPost("CreateReward")]
     public async Task<ActionResult<GetRewardDto>> CreateReward(CreateRewardDto dto)
     {
         var reward = await _rewardService.CreateRewardAsync(dto);
@@ -34,7 +31,7 @@ public class RewardController : ControllerBase
     /// Obtém todas as recompensas.
     /// </summary>
     /// <returns>Lista de recompensas.</returns>
-    [HttpGet]
+    [HttpGet("GetAllRewards")]
     public async Task<ActionResult<IEnumerable<GetRewardDto>>> GetAllRewards()
     {
         var rewards = await _rewardService.GetAllRewardsAsync();
@@ -46,7 +43,7 @@ public class RewardController : ControllerBase
     /// </summary>
     /// <param name="id">ID da recompensa.</param>
     /// <returns>Dados da recompensa correspondente ao ID.</returns>
-    [HttpGet("{id}")]
+    [HttpGet("GetRewardById/{id}")]
     public async Task<ActionResult<GetRewardDto>> GetRewardById(int id)
     {
         var reward = await _rewardService.GetRewardByIdAsync(id);
@@ -62,7 +59,7 @@ public class RewardController : ControllerBase
     /// <param name="id">ID da recompensa a ser atualizada.</param>
     /// <param name="dto">Dados atualizados da recompensa.</param>
     /// <returns>Resultado da atualização.</returns>
-    [HttpPut("{id}")]
+    [HttpPut("UpdateReward/{id}")]
     public async Task<IActionResult> UpdateReward(int id, UpdateRewardDto dto)
     {
         var success = await _rewardService.UpdateRewardAsync(id, dto);
@@ -77,7 +74,7 @@ public class RewardController : ControllerBase
     /// </summary>
     /// <param name="id">ID da recompensa a ser excluída.</param>
     /// <returns>Resultado da exclusão.</returns>
-    [HttpDelete("{id}")]
+    [HttpDelete("DeleteReward/{id}")]
     public async Task<IActionResult> DeleteReward(int id)
     {
         var success = await _rewardService.DeleteRewardAsync(id);

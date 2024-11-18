@@ -65,7 +65,7 @@ public class TaskRegisterController : ControllerBase
     /// </summary>
     /// <param name="userId">O ID do usuário cujas tarefas serão recuperadas.</param>
     /// <returns>Retorna uma resposta Ok com uma lista de tarefas para o usuário ou NotFound se nenhuma tarefa estiver associada ao usuário.</returns>
-    [HttpGet("user/{userId}/tasks")]
+    [HttpGet("GetTasksByUser/{userId}")]
     public async Task<IActionResult> GetTasksByUserAsync(int userId)
     {
         var tasks = await _taskRegisterService.GetTasksByUserIdAsync(userId);

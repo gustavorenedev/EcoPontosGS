@@ -43,8 +43,8 @@ public class TaskWorkController : ControllerBase
     /// </summary>
     /// <param name="id">O ID da tarefa a ser recuperada.</param>
     /// <returns>Retorna uma resposta Ok com os detalhes da tarefa.</returns>
-    [HttpGet("User/{id}")]
-    public async Task<IActionResult> GetTaskByIdAsync(int id)
+    [HttpGet("GetTaskById/{id}")]
+    public async Task<IActionResult> GetTaskById(int id)
     {
         var result = await _taskWorkService.GetTaskByIdAsync(id);
         return Ok(result);

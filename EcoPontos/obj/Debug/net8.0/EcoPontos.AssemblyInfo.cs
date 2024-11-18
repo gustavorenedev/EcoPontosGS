@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EcoPontos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a59f60973f651248383d9dee7a72fde2d4b72192")]
 [assembly: System.Reflection.AssemblyProductAttribute("EcoPontos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EcoPontos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
