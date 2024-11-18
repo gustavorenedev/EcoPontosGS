@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EcoPontos</name>
+    </assembly>
+    <members>
+        <member name="T:EcoPontos.Controllers.Reward.RewardController">
+            <summary>
+            Controller para gerenciar operações CRUD de Reward.
+            </summary>
+        </member>
+        <member name="M:EcoPontos.Controllers.Reward.RewardController.CreateReward(EcoPontos.Service.Reward.Dtos.CreateRewardDto)">
+            <summary>
+            Cria uma nova recompensa.
+            </summary>
+            <param name="dto">Dados da recompensa a serem criados.</param>
+            <returns>Dados da recompensa criada.</returns>
+        </member>
+        <member name="M:EcoPontos.Controllers.Reward.RewardController.GetAllRewards">
+            <summary>
+            Obtém todas as recompensas.
+            </summary>
+            <returns>Lista de recompensas.</returns>
+        </member>
+        <member name="M:EcoPontos.Controllers.Reward.RewardController.GetRewardById(System.Int32)">
+            <summary>
+            Obtém uma recompensa pelo ID.
+            </summary>
+            <param name="id">ID da recompensa.</param>
+            <returns>Dados da recompensa correspondente ao ID.</returns>
+        </member>
+        <member name="M:EcoPontos.Controllers.Reward.RewardController.UpdateReward(System.Int32,EcoPontos.Service.Reward.Dtos.UpdateRewardDto)">
+            <summary>
+            Atualiza uma recompensa existente.
+            </summary>
+            <param name="id">ID da recompensa a ser atualizada.</param>
+            <param name="dto">Dados atualizados da recompensa.</param>
+            <returns>Resultado da atualização.</returns>
+        </member>
+        <member name="M:EcoPontos.Controllers.Reward.RewardController.DeleteReward(System.Int32)">
+            <summary>
+            Exclui uma recompensa pelo ID.
+            </summary>
+            <param name="id">ID da recompensa a ser excluída.</param>
+            <returns>Resultado da exclusão.</returns>
+        </member>
+        <member name="M:EcoPontos.Controllers.TaskRegister.TaskRegisterController.CompleteTaskAsync(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Conclui uma tarefa para um usuário com uma duração especificada.
+            </summary>
+            <param name="userId">O ID do usuário que concluiu a tarefa.</param>
+            <param name="taskId">O ID da tarefa a ser concluída.</param>
+            <param name="duration">A duração gasta na tarefa.</param>
+            <returns>Retorna uma resposta Ok com os detalhes da conclusão ou NotFound se a tarefa não foi encontrada.</returns>
+        </member>
+        <member name="M:EcoPontos.Controllers.TaskRegister.TaskRegisterController.AssignTaskToUserAsync(System.Int32,System.Int32)">
+            <summary>
+            Atribui uma tarefa a um usuário.
+            </summary>
+            <param name="userId">O ID do usuário a quem a tarefa será atribuída.</param>
+            <param name="taskId">O ID da tarefa a ser atribuída.</param>
+            <returns>Retorna uma resposta Ok indicando o resultado da atribuição da tarefa.</returns>
+        </member>
+        <member name="M:EcoPontos.Controllers.TaskRegister.TaskRegisterController.UnassignTaskFromUserAsync(System.Int32,System.Int32)">
+            <summary>
+            Desatribui uma tarefa de um usuário.
+            </summary>
+            <param name="userId">O ID do usuário de quem a tarefa será desatribuída.</param>
+            <param name="taskId">O ID da tarefa a ser desatribuída.</param>
+            <returns>Retorna uma resposta Ok se a tarefa foi desatribuída com sucesso ou NotFound se a associação da tarefa não foi encontrada.</returns>
+        </member>
+        <member name="M:EcoPontos.Controllers.TaskRegister.TaskRegisterController.GetTasksByUserAsync(System.Int32)">
+            <summary>
+            Recupera todas as tarefas associadas a um usuário especificado.
+            </summary>
+            <param name="userId">O ID do usuário cujas tarefas serão recuperadas.</param>
+            <returns>Retorna uma resposta Ok com uma lista de tarefas para o usuário ou NotFound se nenhuma tarefa estiver associada ao usuário.</returns>
+        </member>
+        <member name="M:EcoPontos.Controllers.Task.TaskWorkController.CreateTaskAsync(EcoPontos.Service.TaskWork.Dto.CreateTaskWorkDto)">
+            <summary>
+            Cria uma nova tarefa.
+            </summary>
+            <param name="dto">Os detalhes da tarefa, incluindo tipo e descrição.</param>
+            <returns>Retorna uma resposta Ok com os detalhes da tarefa criada.</returns>
+        </member>
+        <member name="M:EcoPontos.Controllers.Task.TaskWorkController.GetTaskAll">
+            <summary>
+            Recupera todas as tarefas.
+            </summary>
+            <returns>Retorna uma resposta Ok com uma lista de todas as tarefas.</returns>
+        </member>
+        <member name="M:EcoPontos.Controllers.Task.TaskWorkController.GetTaskByIdAsync(System.Int32)">
+            <summary>
+            Recupera uma tarefa pelo seu ID.
+            </summary>
+            <param name="id">O ID da tarefa a ser recuperada.</param>
+            <returns>Retorna uma resposta Ok com os detalhes da tarefa.</returns>
+        </member>
+        <member name="M:EcoPontos.Controllers.Task.TaskWorkController.DeleteTaskAsync(System.Int32)">
+            <summary>
+            Exclui uma tarefa pelo seu ID.
+            </summary>
+            <param name="id">O ID da tarefa a ser excluída.</param>
+            <returns>Retorna uma resposta Ok se a tarefa foi excluída com sucesso.</returns>
+        </member>
+        <member name="M:EcoPontos.Controllers.User.UserController.Register(EcoPontos.Service.User.DTO.RegisterUserDto)">
+            <summary>
+            Registra um novo usuário no sistema.
+            </summary>
+            <param name="dto">Os detalhes do usuário para registro, incluindo nome, email, senha, etc.</param>
+            <returns>Retorna uma resposta Created com o email do usuário registrado.</returns>
+        </member>
+        <member name="M:EcoPontos.Controllers.User.UserController.Login(EcoPontos.Service.User.DTO.LoginDto)">
+            <summary>
+            Realiza o login de um usuário existente.
+            </summary>
+            <param name="dto">Os detalhes de login, incluindo email e senha.</param>
+            <returns>Retorna uma resposta Ok com o resultado do login do usuário.</returns>
+        </member>
+        <member name="M:EcoPontos.Controllers.User.UserController.GetUserById(System.Int32)">
+            <summary>
+            Recupera um usuário pelo seu ID.
+            </summary>
+            <param name="userId">O ID do usuário a ser recuperado.</param>
+            <returns>Retorna uma resposta Ok com os detalhes do usuário.</returns>
+        </member>
+        <member name="T:EcoPontos.Migrations.InitialMigrationUserAndTaskWork">
+            <inheritdoc />
+        </member>
+        <member name="M:EcoPontos.Migrations.InitialMigrationUserAndTaskWork.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:EcoPontos.Migrations.InitialMigrationUserAndTaskWork.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:EcoPontos.Migrations.InitialMigrationUserAndTaskWork.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:EcoPontos.Migrations.updateReferences">
+            <inheritdoc />
+        </member>
+        <member name="M:EcoPontos.Migrations.updateReferences.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:EcoPontos.Migrations.updateReferences.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:EcoPontos.Migrations.updateReferences.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
