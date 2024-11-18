@@ -29,7 +29,7 @@ Este projeto é uma API para gerenciamento de tarefas, usuários e recompensas. 
 ### Testes Unitários
 Os testes unitários foram desenvolvidos para validar a lógica dos métodos principais nas camadas de Service e Repository. Utilizamos xUnit como framework de testes, assegurando que cada funcionalidade isolada opere conforme o esperado
 
-- Validação de CRUD: Testes para criação, leitura, atualização e exclusão dos recursos de Usuário, Produto e Carrinho.
+- Validação de CRUD: Testes para criação, leitura, atualização e exclusão dos recursos de Usuário, Tarefas e Registro de tarefas.
 - Validação de cenário para os métodos da service.
 
 #### Estrutura do Projeto
