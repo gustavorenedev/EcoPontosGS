@@ -78,7 +78,7 @@ Os testes unitários foram desenvolvidos para validar a lógica dos métodos pri
    ```bash
    dotnet run
    ```
-7. Acesse a documentação Swagger em http://localhost:5000/swagger.
+7. Acesse a documentação Swagger em http://localhost:5267/swagger.
 
 ## 📚 Endpoints da API
 
