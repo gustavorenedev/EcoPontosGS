@@ -62,8 +62,8 @@ Os testes unitários foram desenvolvidos para validar a lógica dos métodos pri
    ```
 2. Navegue até a pasta do projeto:
    ```bash
-   cd EcoPontosGS
-   ```
+   cd EcoPontosGS\Ecopontos
+   ```   
 3. Restaure as dependências:
    ```bash
    dotnet restore
@@ -79,6 +79,8 @@ Os testes unitários foram desenvolvidos para validar a lógica dos métodos pri
    dotnet run
    ```
 7. Acesse a documentação Swagger em http://localhost:5267/swagger.
+
+8. Ou então basta acessar a sln do projeto na pasta EcoPontos e rodar no visual studio
 
 ## 📚 Endpoints da API
 
